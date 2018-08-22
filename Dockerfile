@@ -7,6 +7,7 @@ RUN mkdir -p /app \
  && chmod -R g=rwx /app
 COPY build/libs/*.jar /app/app.jar
 COPY start.sh /
+RUN chmod +x /start.sh
 ENTRYPOINT ["/start.sh"]
 CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-jar", "/app/app.jar"]
 

@@ -36,5 +36,5 @@ dependencies {
 
 task createDockerImage(type: DockerBuildImage) {
     inputDir = file('.')
-    tags = ['bmiedlar/k8s-demo']
+    tags = ['k8s-demo']
 }
