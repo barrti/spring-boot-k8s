@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring-boot-deployment
@@ -6,8 +6,8 @@ spec:
   selector:
     matchLabels:
       app: k8s-demo
-  replicas: 3 # tells deployment to run 3 pods matching the template
-  template: # create pods using pod definition in this template
+  replicas: 3
+  template:
     metadata:
       labels:
         app: k8s-demo
